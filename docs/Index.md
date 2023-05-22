@@ -1,7 +1,7 @@
 Instruksi Umum
 ==============
 
-mLITE adalah sistem manajemen kesehatan yang sederhana, ringan dan cepat. Pertama kali dirilis pada Mei 2019. Versi gratis dari aplikasi ini dibagikan di bawah [lisensi](/lisensi) yang mengharuskan meninggalkan informasi tentang penulis dan tautan balik. Dengan dokumentasi ini Anda akan belajar cara menginstal, mengkonfigurasi, dan membuat modul dan tema Anda sendiri.
+Karirku adalah sistem manajemen kesehatan yang sederhana, ringan dan cepat. Pertama kali dirilis pada Mei 2019. Versi gratis dari aplikasi ini dibagikan di bawah [lisensi](/lisensi) yang mengharuskan meninggalkan informasi tentang penulis dan tautan balik. Dengan dokumentasi ini Anda akan belajar cara menginstal, mengkonfigurasi, dan membuat modul dan tema Anda sendiri.
 
 Dokumentasi dibagi menjadi beberapa bagian. Yang pertama adalah untuk instruksi umum, yang kedua untuk pengembang forntend dan yang terakhir untuk pengembang backend.
 
@@ -9,7 +9,7 @@ Dokumentasi dibagi menjadi beberapa bagian. Yang pertama adalah untuk instruksi 
 Persyaratan
 -----------
 
-Persyaratan sistem untuk mLITE sangat sederhana, jadi setiap server modern sudah mencukupi.
+Persyaratan sistem untuk Karirku sangat sederhana, jadi setiap server modern sudah mencukupi.
 
 + Apache 2.2+ or Nginx dengan `mod_rewrite`
 + PHP version 7.0+
@@ -29,11 +29,10 @@ Konfigurasi PHP harus memiliki ekstensi berikut:
 Instalasi
 ---------
 
-Pertama unduh versi terbaru [mLITE](https://github.com/basoro/khanza-lite).
 
 Ekstrak semua file dari paket terkompresi dan kemudian transfer ke direktori lokal atau server. Untuk server cloud, sambungkan melalui klien (S)FTP, seperti program [FileZilla](https://filezilla-project.org) gratis. Biasanya, file harus diunggah ke `www`, `htdocs` atau `public_html`.
 
-**Peringatan!** Pastikan file `.htaccess` juga ada di server. Tanpa itu mLITE tidak akan berfungsi.
+**Peringatan!** Pastikan file `.htaccess` juga ada di server. Tanpa itu Karirku tidak akan berfungsi.
 
 Beberapa server mungkin memerlukan izin tambahan `chmod 777` untuk direktori dan file berikut:
 
@@ -43,7 +42,7 @@ Beberapa server mungkin memerlukan izin tambahan `chmod 777` untuk direktori dan
 + systems/data/
 + webapps/
 
-Buka browser Anda dan arahkan ke alamat tempat file mLITE berada. Tunggu beberapa saat sampai proses instalasi dibelakang layar (background) selesai.
+Buka browser Anda dan arahkan ke alamat tempat file Karirku berada. Tunggu beberapa saat sampai proses instalasi dibelakang layar (background) selesai.
 
 Untuk masuk ke panel administrasi, tambahkan `/admin/` di akhir URL. **Login dan kata sandi awal adalah *"admin"*.** Ini harus diubah segera setelah login untuk alasan keamanan. Kami juga merekomendasikan mengganti nama direktori dengan panel administrasi. *(Anda perlu mengubah nilai konstanta dalam file definisi di config.php)*.
 
@@ -51,7 +50,7 @@ Untuk masuk ke panel administrasi, tambahkan `/admin/` di akhir URL. **Login dan
 Konfigurasi
 -----------
 
-mLITE dapat dikonfigurasi dengan mengedit pengaturan di panel administrasi dan melalui file config.php. Namun, kami menyarankan mengubah beberapa konfigurasi dalam file jika Anda adalah orang yang tidak berpengalaman. Seperti informasi nama database, user, pengguna dan host.
+Karirku dapat dikonfigurasi dengan mengedit pengaturan di panel administrasi dan melalui file config.php. Namun, kami menyarankan mengubah beberapa konfigurasi dalam file jika Anda adalah orang yang tidak berpengalaman. Seperti informasi nama database, user, pengguna dan host.
 
 ### Panel Administrasi
 Untuk mengubah konfigurasi dasar di panel admin, pilih tab `Pengaturan`. Anda dapat memasukkan nama instansi, deskripsi dan lain sebagainya, serta di tempat lain di template default, seperti di header. Anda juga dapat mengubah default tampilan beranda.
@@ -74,11 +73,11 @@ Hal-hal lebih lanjut yang dapat Anda ubah di file `config.php`, yang berisi defi
 Pembaruan (Update)
 ------------------
 
-Jika Anda ingin tetap up to date dengan semua berita terbaru, perbaikan bug dan masalah keamanan, Anda harus secara teratur memeriksa pembaruan mLITE. Anda dapat melakukannya di tab `Pengaturan -> Pembaruan`. Sistem akan memeriksa versi baru skrip dan secara otomatis mengunduh paket baru dari server Github dan memperbarui file dan modul inti.
+Jika Anda ingin tetap up to date dengan semua berita terbaru, perbaikan bug dan masalah keamanan, Anda harus secara teratur memeriksa pembaruan Karirku. Anda dapat melakukannya di tab `Pengaturan -> Pembaruan`. Sistem akan memeriksa versi baru skrip dan secara otomatis mengunduh paket baru dari server Github dan memperbarui file dan modul inti.
 
-Jika terjadi kesalahan atau kesulitan update otomatis, Anda dapat menggunakan mode update manual. Untuk melakukannya, unduh mLITE versi terbaru, unggah ke direktori aplikasi utama, lalu tambahkan parameter `&manual` di akhir URL bookmark pembaruan. CMS akan mendeteksi paket zip dan ketika Anda mengklik tombol update, proses mengekstrak dan menimpa file akan dilakukan.
+Jika terjadi kesalahan atau kesulitan update otomatis, Anda dapat menggunakan mode update manual. Untuk melakukannya, unduh Karirku versi terbaru, unggah ke direktori aplikasi utama, lalu tambahkan parameter `&manual` di akhir URL bookmark pembaruan. CMS akan mendeteksi paket zip dan ketika Anda mengklik tombol update, proses mengekstrak dan menimpa file akan dilakukan.
 
-Sebelum setiap pembaruan, mLITE membuat cadangan. Anda akan menemukannya di direktori skrip, di folder `backup/`. Jika pembaruan gagal, Anda dapat memulihkannya kapan saja.
+Sebelum setiap pembaruan, Karirku membuat cadangan. Anda akan menemukannya di direktori skrip, di folder `backup/`. Jika pembaruan gagal, Anda dapat memulihkannya kapan saja.
 
 
 Tema (Themes)
@@ -87,7 +86,7 @@ Tema (Themes)
 Struktur
 --------
 
-Struktur tema dalam mLITE sangat sederhana. Cukup buat folder baru di direktori `themes/` dan file-file berikut:
+Struktur tema dalam Karirku sangat sederhana. Cukup buat folder baru di direktori `themes/` dan file-file berikut:
 
 + `index.html` — template default untuk subhalaman
 + `manifest.json` — informasi tema
@@ -95,12 +94,12 @@ Struktur tema dalam mLITE sangat sederhana. Cukup buat folder baru di direktori 
 
 Setiap sub halaman dapat menggunakan template lain, jadi selain file yang disebutkan, Anda juga dapat membuat yang lain, misalnya `xyz.html`. Pemilihan template tersedia di panel admin saat membuat halaman. Tidak ada aturan tentang file CSS dan JS. Ada kebebasan penuh.
 
-Di folder tema Anda juga dapat membuat tampilan modul Anda sendiri. Untuk melakukan ini, Anda perlu membuat direktori `plugins/nama_plugin` dan file `*.html` dengan nama yang sesuai dengan nama tampilan asli. Misalnya, tampilan formulir kontak harus dimuat dalam jalur berikut: `themes/nama_tema/plugins/kontak/form.html`. mLITE secara otomatis mendeteksi tampilan baru dan menggunakannya sebagai ganti tampilan default modul.
+Di folder tema Anda juga dapat membuat tampilan modul Anda sendiri. Untuk melakukan ini, Anda perlu membuat direktori `plugins/nama_plugin` dan file `*.html` dengan nama yang sesuai dengan nama tampilan asli. Misalnya, tampilan formulir kontak harus dimuat dalam jalur berikut: `themes/nama_tema/plugins/kontak/form.html`. Karirku secara otomatis mendeteksi tampilan baru dan menggunakannya sebagai ganti tampilan default modul.
 
 Tag template
 ------------
 
-mLITE menggunakan sistem template sederhana yang menyertakan tag berikut:
+Karirku menggunakan sistem template sederhana yang menyertakan tag berikut:
 
 ### Variables
 ```php
@@ -176,18 +175,18 @@ Komentar tidak terlihat di file sumber setelah mengkompilasi template.
 
 Variabel sistem
 ----------------
-mLITE, seperti pluginnya, menyediakan banyak variabel *(biasanya array)* yang berfungsi untuk menampilkan setiap elemen halaman. Berikut adalah yang paling penting:
+Karirku, seperti pluginnya, menyediakan banyak variabel *(biasanya array)* yang berfungsi untuk menampilkan setiap elemen halaman. Berikut adalah yang paling penting:
 
-+ `{$settings.pole}` — elemen yang berisi nilai bidang pengaturan mLITE yang diberikan
++ `{$settings.pole}` — elemen yang berisi nilai bidang pengaturan Karirku yang diberikan
 + `{$settings.moduł.pole}` — elemen yang berisi nilai bidang pengaturan modul
-+ `{$mlite.path}` — menyimpan jalur tempat sistem berada
-+ `{$mlite.notify}` — pemberitahuan terakhir
-+ `{$mlite.notify.text}` - teks notifikasi
-+ `{$mlite.notify.type}` - jenis pesan yang sesuai dengan kelas Bootstrap *(bahaya, sukses)*
-+ `{$mlite.header}` — tag meta tambahan, skrip JS, dan lembar gaya CSS dimuat oleh modul
-+ `{$mlite.footer}` — skrip JS tambahan dimuat oleh modul
-+ `{$mlite.theme}` — menampilkan jalur ke tema aktif dengan host
-+ `{$mlite.powered}` — menampilkan *Didukung oleh mLITE* dengan tautan ke situs resmi
++ `{$Karirku.path}` — menyimpan jalur tempat sistem berada
++ `{$Karirku.notify}` — pemberitahuan terakhir
++ `{$Karirku.notify.text}` - teks notifikasi
++ `{$Karirku.notify.type}` - jenis pesan yang sesuai dengan kelas Bootstrap *(bahaya, sukses)*
++ `{$Karirku.header}` — tag meta tambahan, skrip JS, dan lembar gaya CSS dimuat oleh modul
++ `{$Karirku.footer}` — skrip JS tambahan dimuat oleh modul
++ `{$Karirku.theme}` — menampilkan jalur ke tema aktif dengan host
++ `{$Karirku.powered}` — menampilkan *Didukung oleh Karirku* dengan tautan ke situs resmi
 + `{$navigation.xyz}` — menampilkan daftar elemen navigasi `<li>`
 + `{$page.title}` — menampilkan nama subhalaman
 + `{$page.content}` — menampilkan konten subhalaman
@@ -202,7 +201,7 @@ Contoh
     "name": "Contoh",
     "version": "1.0",
     "author": "Basoro",
-    "email": "contact@mlite.id",
+    "email": "contact@Karirku.id",
     "thumb": "preview.png"
 }
 ```
@@ -218,8 +217,8 @@ Contoh
   <title>{$page.title} - {$settings.title}</title>
   <meta name="description" content="{$settings.description}">
   <meta name="keywords" content="{$settings.keywords}">
-  <link rel="stylesheet" href="{$mlite.theme}/styles.css">
-  {loop: $mlite.header}{$value}{/loop}
+  <link rel="stylesheet" href="{$Karirku.theme}/styles.css">
+  {loop: $Karirku.header}{$value}{/loop}
 </head>
 
 <body>
@@ -235,11 +234,11 @@ Contoh
     </main>
 
     <footer>
-        {$settings.footer} {$mlite.powered}
+        {$settings.footer} {$Karirku.powered}
     </footer>
 
-    <script src="{$mlite.theme}/scripts.js"></script>
-    {loop: $mlite.footer}{$value}{/loop}
+    <script src="{$Karirku.theme}/scripts.js"></script>
+    {loop: $Karirku.footer}{$value}{/loop}
 </body>
 </html>
 ```
@@ -252,7 +251,7 @@ Struktur
 
 Setiap plugin, seperti tema, harus berada dalam folder terpisah yang dibuat di jalur `plugins/`. Harap dicatat bahwa direktori tidak mengandung huruf besar dan karakter khusus, seperti spasi.
 
-Saat membuat plugin, Anda perlu memikirkan jenis plugin apa yang ingin Anda gunakan. Apakah seharusnya dikonfigurasi di panel admin atau hanya berfungsi di front-end? Karena pembagian ini, dalam mLITE kami membedakan tiga file plugin utama:
+Saat membuat plugin, Anda perlu memikirkan jenis plugin apa yang ingin Anda gunakan. Apakah seharusnya dikonfigurasi di panel admin atau hanya berfungsi di front-end? Karena pembagian ini, dalam Karirku kami membedakan tiga file plugin utama:
 
 + `Info.php` — berisi informasi tentang plugin, seperti nama, deskripsi, penulis, atau ikon
 + `Admin.php` — konten file ini dapat diakses melalui panel admin
@@ -290,7 +289,7 @@ File paling penting untuk setiap modul. Ini berisi informasi dasar dan instruksi
         'description'   =>  'Lorem ipsum....',
         'author'        =>  'Basoro',
         'version'       =>  '1.0',
-        'compatibility' =>  '2022*',                  // Kesesuaian dengan versi mLITE
+        'compatibility' =>  '2022*',                  // Kesesuaian dengan versi Karirku
         'icon'          =>  'bolt',
         'pages'         =>  ['Contoh' => 'contoh'],   // Berfungsi sebagai halaman (opsional)
         'install'       =>  function() use($core)     // Perintah install
@@ -558,7 +557,7 @@ $this->setTemplate('index.html'); // $this->core->template = 'index.html';
 Database
 --------
 
-Basis data yang digunakan pada mLITE adalah MySQL dan SQLite versi 3. Untuk penggunaannya mLITE menggunakan class sederhana yang memudahkan untuk membangun query. Anda tidak perlu tahu SQL untuk dapat mengoperasikannya.
+Basis data yang digunakan pada Karirku adalah MySQL dan SQLite versi 3. Untuk penggunaannya Karirku menggunakan class sederhana yang memudahkan untuk membangun query. Anda tidak perlu tahu SQL untuk dapat mengoperasikannya.
 
 ### SELECT
 

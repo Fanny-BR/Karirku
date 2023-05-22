@@ -3,7 +3,7 @@
 return [
     'name'          =>  'Dashboard',
     'description'   =>  'Akses cepat pada modul dan berita.',
-    'author'        =>  'Basoro.ID',
+    'author'        =>  'KarirKu',
     'version'       =>  '1.1',
     'compatibility' =>  '2023',
     'icon'          =>  'home',

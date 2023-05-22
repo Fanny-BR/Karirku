@@ -3,7 +3,7 @@
 return [
     'name'          =>  'Profil',
     'description'   =>  'Modul profil',
-    'author'        =>  'Basoro.ID',
+    'author'        =>  'KarirKu',
     'version'       =>  '1.1',
     'compatibility' =>  '2023',
     'icon'          =>  'address-book',

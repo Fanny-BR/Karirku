@@ -37,7 +37,7 @@ class Admin extends Main
 
         $this->assign['tanggal']       = getDayIndonesia(date('Y-m-d')).', '.dateIndonesia(date('Y-m-d'));
         $this->assign['notify']        = $this->getNotify();
-        $this->assign['powered']       = 'Powered by <a href="https://mlite.id/">mLITE</a>';
+        $this->assign['powered']       = 'Powered by <a href="https://karirku.id/">Karirku</a>';
         $this->assign['path']          = url();
         $this->assign['nama_instansi'] = $this->settings->get('settings.nama_instansi');
         $this->assign['logo'] = $this->settings->get('settings.logo');
@@ -48,25 +48,6 @@ class Admin extends Main
 
         $this->assign['header'] = isset_or($this->appends['header'], ['']);
         $this->assign['footer'] = isset_or($this->appends['footer'], ['']);
-
-        $this->assign['pasien_access'] = ($access == 'all') || in_array('pasien', explode(',', $access)) ? true : false;
-        $this->assign['module_pasien'] = $this->db('mlite_modules')->where('dir', 'pasien')->oneArray();
-        $this->assign['igd_access'] = ($access == 'all') || in_array('igd', explode(',', $access)) ? true : false;
-        $this->assign['module_igd'] = $this->db('mlite_modules')->where('dir', 'igd')->oneArray();
-        $this->assign['rawat_jalan_access'] = ($access == 'all') || in_array('rawat_jalan', explode(',', $access)) ? true : false;
-        $this->assign['module_rawat_jalan'] = $this->db('mlite_modules')->where('dir', 'rawat_jalan')->oneArray();
-        $this->assign['rawat_inap_access'] = ($access == 'all') || in_array('rawat_inap', explode(',', $access)) ? true : false;
-        $this->assign['module_rawat_inap'] = $this->db('mlite_modules')->where('dir', 'rawat_inap')->oneArray();
-
-        $this->assign['dokter_igd_access'] = ($access == 'all') || in_array('dokter_igd', explode(',', $access)) ? true : false;
-        $this->assign['dokter_ralan_access'] = ($access == 'all') || in_array('dokter_ralan', explode(',', $access)) ? true : false;
-        $this->assign['dokter_ranap_access'] = ($access == 'all') || in_array('dokter_ranap', explode(',', $access)) ? true : false;
-        $this->assign['cek_anjungan'] = $this->db('mlite_modules')->where('dir', 'anjungan')->oneArray();
-
-        $this->assign['poliklinik'] = '';
-        if($this->assign['cek_anjungan']) {
-          $this->assign['poliklinik'] = $this->_getPoliklinik($this->settings->get('anjungan.display_poli'));
-        }
 
         $this->assign['presensi'] = $this->db('mlite_modules')->where('dir', 'presensi')->oneArray();
 

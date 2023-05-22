@@ -3,7 +3,7 @@
 return [
     'name'          =>  'Presensi',
     'description'   =>  'Modul presensi',
-    'author'        =>  'Basoro.ID',
+    'author'        =>  'KarirKu',
     'version'       =>  '1.2',
     'compatibility' =>  '2023',
     'icon'          =>  'user-o',

@@ -3,7 +3,7 @@
 return [
     'name'          =>  'Modul-Modul',
     'description'   =>  'Pengelolaan modul',
-    'author'        =>  'Basoro.ID',
+    'author'        =>  'KarirKu',
     'version'       =>  '1.1',
     'compatibility' =>  '2023',
     'icon'          =>  'plug',

@@ -3,7 +3,7 @@
 return [
     'name'          =>  'Pengaturan',
     'description'   =>  'Pengelolaan pengaturan',
-    'author'        =>  'Basoro.ID',
+    'author'        =>  'KarirKu',
     'version'       =>  '1.0',
     'compatibility' =>  '2023',
     'icon'          =>  'wrench',

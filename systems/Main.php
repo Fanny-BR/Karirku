@@ -52,19 +52,7 @@ abstract class Main
         if (!is_dir(UPLOADS)) {
             mkdir(UPLOADS, 0777);
         }
-
-        if (!is_dir(WEBAPPS_PATH."/berkasrawat")) {
-            mkdir(WEBAPPS_PATH."/berkasrawat", 0777);
-        }
-
-        if (!is_dir(WEBAPPS_PATH."/berkasrawat/pages")) {
-            mkdir(WEBAPPS_PATH."/berkasrawat/pages", 0777);
-        }
-
-        if (!is_dir(WEBAPPS_PATH."/berkasrawat/pages/upload")) {
-            mkdir(WEBAPPS_PATH."/berkasrawat/pages/upload", 0777);
-        }
-
+        
         if (!is_dir(WEBAPPS_PATH."/presensi")) {
             mkdir(WEBAPPS_PATH."/presensi", 0777);
         }
@@ -73,9 +61,6 @@ abstract class Main
             mkdir(WEBAPPS_PATH."/penggajian", 0777);
         }
 
-        if (!is_dir(WEBAPPS_PATH."/photopasien")) {
-            mkdir(WEBAPPS_PATH."/photopasien", 0777);
-        }
 
         if (!is_dir(WEBAPPS_PATH."/penggajian/pages")) {
             mkdir(WEBAPPS_PATH."/penggajian/pages", 0777);
@@ -191,7 +176,7 @@ abstract class Main
         $checkBuffer = preg_replace('/<!--(.|\s)*?-->/', '', $buffer);
         $isHTML = strpos(get_headers_list('Content-Type'), 'text/html') !== false;
         $hasBacklink = strpos($checkBuffer, base64_decode('UG93ZXJlZCBieSA8YSBocmVmPSJodHRwczovL21saXRlLmlkLyI+bUxJVEU8L2E+')) !== false;
-        $hasHeader = get_headers_list('X-Created-By') === 'Medic LITE Indonesia <mlite.id>';
+        $hasHeader = get_headers_list('X-Created-By') === 'Karirku';
         $license = License::verify($core->settings->get('settings.license'));
         if (($license == License::UNREGISTERED) && $isHTML && (!$hasBacklink)) {
             return '<center><strong>Ciluk baaa......</strong><br />Menghapus trade mark saya yaa....! Upsss....</center>';
